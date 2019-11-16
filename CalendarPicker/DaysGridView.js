@@ -35,7 +35,8 @@ export default function DaysGridView(props) {
     disabledDates,
     minRangeDuration,
     maxRangeDuration,
-    enableDateChange
+    enableDateChange,
+    minRangeDayStyle
   } = props;
 
   const today = moment();
@@ -94,6 +95,7 @@ export default function DaysGridView(props) {
                 selectedRangeEndStyle={selectedRangeEndStyle}
                 customDatesStyles={customDatesStyles}
                 enableDateChange={enableDateChange}
+                minRangeDayStyle={minRangeDayStyle}
               />
             );
           }
@@ -132,6 +134,7 @@ export default function DaysGridView(props) {
               selectedRangeEndStyle={selectedRangeEndStyle}
               customDatesStyles={customDatesStyles}
               enableDateChange={enableDateChange}
+              minRangeDayStyle={minRangeDayStyle}
             />
           );
         }

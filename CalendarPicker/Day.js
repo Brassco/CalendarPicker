@@ -30,7 +30,8 @@ export default function Day(props) {
     disabledDates,
     minRangeDuration,
     maxRangeDuration,
-    enableDateChange
+    enableDateChange,
+    minRangeDayStyle
   } = props;
 
   const thisDay = moment({year, month, day});
@@ -177,8 +178,8 @@ export default function Day(props) {
   }
   else {  // dateOutOfRange = true
     return (
-      <View style={styles.dayWrapper}>
-        <Text style={[textStyle, styles.disabledText]}>
+      <View style={dateIsBeforeMinDuration ? [styles.dayWrapper, styles.selectedDay, minRangeDayStyle] : styles.dayWrapper}>
+        <Text style={dateIsBeforeMinDuration ? textStyle : [textStyle, styles.disabledText]}>
           { day }
         </Text>
       </View>

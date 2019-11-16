@@ -263,7 +263,8 @@ export default class CalendarPicker extends Component {
       customDatesStyles,
       enableDateChange,
       restrictMonthNavigation,
-      headingLevel
+      headingLevel,
+      minRangeDayStyle
     } = this.props;
 
     let _disabledDates = [];
@@ -366,6 +367,7 @@ export default class CalendarPicker extends Component {
             selectedRangeStyle={selectedRangeStyle}
             selectedRangeEndStyle={selectedRangeEndStyle}
             customDatesStyles={customDatesStyles}
+            minRangeDayStyle={minRangeDayStyle}
           />
         </View>
       </Swiper>
